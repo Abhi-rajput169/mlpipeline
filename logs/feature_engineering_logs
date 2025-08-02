@@ -20,3 +20,15 @@
 2025-08-02 20:25:12,507-feature_engineering-DEBUG-TF-IDF applied and data transformed
 2025-08-02 20:25:12,638-feature_engineering-DEBUG-Data saved to ./data\new_data\train_tfidf.csv
 2025-08-02 20:25:12,675-feature_engineering-DEBUG-Data saved to ./data\new_data\test_tfidf.csv
+2025-08-02 22:38:08,061-feature_engineering-DEBUG-Parameters retrived from params.yaml
+2025-08-02 22:38:08,077-feature_engineering-DEBUG-data loaded and nan filled from %s',file_pat
+2025-08-02 22:38:08,083-feature_engineering-DEBUG-data loaded and nan filled from %s',file_pat
+2025-08-02 22:38:08,157-feature_engineering-DEBUG-TF-IDF applied and data transformed
+2025-08-02 22:38:08,248-feature_engineering-DEBUG-Data saved to ./data\new_data\train_tfidf.csv
+2025-08-02 22:38:08,276-feature_engineering-DEBUG-Data saved to ./data\new_data\test_tfidf.csv
+2025-08-02 22:55:34,149-feature_engineering-DEBUG-Parameters retrived from params.yaml
+2025-08-02 22:55:34,164-feature_engineering-DEBUG-data loaded and nan filled from %s',file_pat
+2025-08-02 22:55:34,172-feature_engineering-DEBUG-data loaded and nan filled from %s',file_pat
+2025-08-02 22:55:34,254-feature_engineering-DEBUG-TF-IDF applied and data transformed
+2025-08-02 22:55:34,373-feature_engineering-DEBUG-Data saved to ./data\new_data\train_tfidf.csv
+2025-08-02 22:55:34,408-feature_engineering-DEBUG-Data saved to ./data\new_data\test_tfidf.csv

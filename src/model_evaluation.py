@@ -6,6 +6,7 @@ import numpy as np
 from sklearn.metrics import accuracy_score,precision_score,recall_score,roc_auc_score
 import logging
 
+
 log_dir='logs'
 os.makedirs(log_dir,exist_ok=True)
 
@@ -25,6 +26,7 @@ file_handler.setFormatter(formatter)
 
 logger.addHandler(console_handler)
 logger.addHandler(file_handler)
+
 
 def load_model(file_path:str):
     """we will load the model from a file"""

@@ -2,6 +2,7 @@ import pandas as pd
 import logging
 from sklearn.feature_extraction.text import TfidfVectorizer
 import os
+import yaml
 
 log_dir='logs'
 os.makedirs(log_dir,exist_ok=True)
@@ -22,6 +23,23 @@ file_handler.setFormatter(formatter)
 
 logger.addHandler(console_handler)
 logger.addHandler(file_handler)
+
+def load_params(params_path:str):
+    """load the params file rom the the path"""
+    try:
+        with open(params_path,'r') as file:
+            params=yaml.safe_load(file)
+        logger.debug('Parameters retrived from %s',params_path)
+        return params
+    except FileNotFoundError:
+        logger.error('file not found:%s',params_path)
+        raise
+    except yaml.YAMLError as e:
+        logger.error('yaml error:%s',e)
+        raise
+    except Exception as e:
+        logger.error('unexpected error:%s',e)
+        raise
 
 def load_data(file_path:str)->pd.DataFrame:
     """ load the data from csv file"""
@@ -86,7 +104,8 @@ def save_data(df: pd.DataFrame, file_path: str) -> None:
         raise
 def main():
     try:
-        max_features = 50
+        params=load_params(params_path='params.yaml')
+        max_features=params['feature_engineering']['max_features']
 
         train_data = load_data(r'data\processed\training_process_csv')
         test_data = load_data(r'data\processed\testing_process_csv')
